@@ -20,6 +20,7 @@ class BallPage extends StatelessWidget {
         elevation: 70.0,
         shadowColor: Colors.grey,
         titleTextStyle: const TextStyle(
+          fontWeight: FontWeight.bold,
           fontSize: 40.0,
           letterSpacing: 5.0,
           color: Colors.blue,
@@ -56,7 +57,10 @@ class _BallState extends State<Ball> {
             print('image number $ballNumber was picked');
           });
         },
-        child: Image.asset('images/ball$ballNumber.png'),
+        child: MaterialApp(
+          home: Image.asset('images/ball$ballNumber.png'),
+
+        ),
       ),
     );
   }
