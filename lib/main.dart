@@ -41,21 +41,15 @@ class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        children: <Widget> [
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                print('i got clicked');
-                setState(() {
-                  ballNumber = Random().nextInt(5) + 1;
-                  print('image number $ballNumber was picked');
-                });
-              },
-              child: Image.asset('images/ball$ballNumber.png'),
-            ),
-          ),
-        ],
+      child: TextButton(
+        onPressed: () {
+          print('i got clicked');
+          setState(() {
+            ballNumber = Random().nextInt(5) + 1;
+            print('image number $ballNumber was picked');
+          });
+        },
+        child: Image.asset('images/ball$ballNumber.png'),
       ),
     );
   }
